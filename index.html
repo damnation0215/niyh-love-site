@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Niyh ❤️</title>
+
+<style>
+body {
+    text-align: center;
+    font-family: Arial;
+    margin-top: 100px;
+    background-color: #ffe6f0;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 40px;
+    color: #ff4d6d;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+    position: absolute;
+}
+
+#yesBtn {
+    position: static;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+#noBtn {
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.loveText {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ff4d6d;
+    margin-top: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Niyh, do you love me? ❤️</h1>
+
+<button id="yesBtn" onclick="showLove()">Yes ❤️</button>
+<button id="noBtn" onmouseover="moveButton()">No 😢</button>
+
+<!-- Background Music -->
+<audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function moveButton() {
+    var button = document.getElementById("noBtn");
+
+    var x = Math.random() * (window.innerWidth - 100);
+    var y = Math.random() * (window.innerHeight - 100);
+
+    button.style.left = x + "px";
+    button.style.top = y + "px";
+}
+
+function showLove() {
+    document.body.innerHTML = `
+        <h1 class="loveText">I LOVE YOU NIYH ❤️</h1>
+
+        <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif"
+        width="300">
+
+        <audio autoplay loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+    `;
+}
+
+</script>
+
+</body>
+</html>
